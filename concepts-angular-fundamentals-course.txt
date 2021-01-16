@@ -1,0 +1,61 @@
+# Static typing:
+Types checked before run-time (tracking bugs before shifting your code..).
+e.g: let age: number
+
+# Dinamic typing:
+Type checked mostly at run time. (runtime issues are more expensive if missed).
+
+# Interfaces:
+Interface is a structure that defines the contract in your application.
+It defines the syntax for classes to follow.Classes that are derived from an interface
+must follow the structure provided by their interface.
+e.g: interface IEmployee {
+         empCode: number;
+         empName: string;
+         getSalary: (number) => number; // arrow function
+         getManagerName(number)?: string;
+     }
+
+# Bootstrap
+The most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
+
+#app.module.ts <--- main module
+Cuando quiero importar un component, un pipe o un directive lo tengo que declarar en "declarations:" en @NgModule
+Los services son añandidos en los "providers".
+los "imports" se usan para importar otros modulos.
+
+# Interpolation
+Cuando escribis en el html "{{ variable.property }}" para acceder a datos en el ts
+
+# Property binding
+Is a one-way mechanism that lets you set the property of a view element.
+It involves updating the value of a property in the component and binding it to
+an element in the view template.Property binding uses the[] syntax for data binding.
+An example is setting the disabled state of a button. e.g: [event]="event"
+
+# Event binding
+This data binding type is when information flows from the view to the component when
+an event is triggered.The view sends the data from an event like the click of a button
+to be used to update the component.It is the exact opposite of property binding,
+where the data goes from the component to the view. e.g: (click)="handleClick()"
+
+# Inter-component comunication
+# @Input
+# @Output
+# Template reference variables (#variable)
+Allows you to specify a variable name that points to a component and then you can access any public properties
+or methods on that component.
+e.g :   <event-thumbnail #thumbnail [event]="event"></event-thumbnail>
+        <button class="btn btn-primary" (click)="thumbnail.logFoo()">Log foo</button>
+
+# Interfaces:
+A class is a blueprint from which we can create objects that share the same configuration - properties and methods.
+An interface is a group of related properties and methods that describe an object, but neither provides
+implementation nor initialisation for them.
+
+# Two-way binding:
+[(ngModule)]: <-- "Banana in the box" binding
+() => Used to bind html TO component direction
+[] => Used to bind component TO html direction
+
+me quede en el 7to modulo -> Using data from template-based form
