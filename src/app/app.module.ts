@@ -13,7 +13,8 @@ import { CreateEventComponent } from './events/create-event/create-event.compone
 import { Error404Component } from './events/error/404.component';
 import { EventRouterActivator } from './events/event-details/event-route-activator.component';
 import { EventListResolver } from './events/services/events-list-resolver.service';
-import { ProfileModule } from './user/profile.module';
+import { UserModule } from './user/user.module';
+import { AuthService } from './user/services/auth.service';
 
 @NgModule({
   declarations: [
@@ -25,9 +26,10 @@ import { ProfileModule } from './user/profile.module';
     EventThumbnailComponent,
     NavBarComponent,
   ],
-  imports: [BrowserModule, ProfileModule, RouterModule.forRoot(appRoutes)],
+  imports: [BrowserModule, UserModule, RouterModule.forRoot(appRoutes)],
   bootstrap: [EventsAppComponent],
   providers: [
+    AuthService,
     EventService,
     EventListResolver,
     EventRouterActivator,

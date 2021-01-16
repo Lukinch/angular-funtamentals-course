@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { IEvent } from '../models/event-interface';
 
 @Component({
   templateUrl: './events-list.component.html',
 })
 export class EventsListComponent implements OnInit {
-  events: any;
+  events: IEvent;
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {

@@ -5,7 +5,6 @@ import { EventsListComponent } from './events/events-list.component/events-list.
 import { CreateEventComponent } from './events/create-event/create-event.component';
 import { EventRouterActivator } from './events/event-details/event-route-activator.component';
 import { EventListResolver } from './events/services/events-list-resolver.service';
-import { ProfileComponent } from './user/profile.component';
 
 export const appRoutes: Routes = [
   {
@@ -29,7 +28,6 @@ export const appRoutes: Routes = [
   { path: '', redirectTo: '/events', pathMatch: 'full' },
   {
     path: 'user',
-    loadChildren: () =>
-      import('./user/profile.module').then((m) => m.ProfileModule),
+    loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
   },
 ];
