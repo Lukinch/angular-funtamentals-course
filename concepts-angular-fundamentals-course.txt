@@ -58,4 +58,10 @@ implementation nor initialisation for them.
 () => Used to bind html TO component direction
 [] => Used to bind component TO html direction
 
-me quede en el 7to modulo -> Using data from template-based form
+# Reactive Forms
+Reactive forms provide a model-driven approach to handling form inputs whose values change over time.
+This guide shows you how to create and update a basic form control, progress to using multiple controls in a group,
+validate form values, and create dynamic forms where you can add or remove controls at run time.
+https://angular.io/guide/reactive-forms
+
+me quede en el 7to modulo -> Creating your first reactive form

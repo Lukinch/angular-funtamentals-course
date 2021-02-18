@@ -45,7 +45,7 @@
             <a
               *ngIf="authService.isAuthenticated()"
               [routerLink]="['user/profile']"
-              >Welcome Lucas</a
+              >Welcome {{ authService.currentUser.firstName }}</a
             >
           </li>
         </ul>
